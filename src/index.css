@@ -1,0 +1,159 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+a {
+  font-weight: 500;
+  color: white;
+  text-decoration: inherit;
+  padding:0.5rem 0;
+  transition: all ease 5s;
+}
+a::after {
+  display: block;
+content: '';
+height: 2px;
+width: 0;
+background-color: orange;  transition: all ease .5s;
+}
+
+a:hover::after {
+  content: '';
+  width: 100%;
+  }
+
+a.active::after {
+height: 2px;
+width: 100%;
+background-color: orange;  transition: all ease .3s;
+}
+
+h1 a {
+  color:white;
+}
+h1 a:hover {
+  color:inherit;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer{
+position: fixed;
+bottom: 0;
+width: 100%;
+text-align: center;
+}
+
+header, footer {
+  background: #333;
+  color: #fff;
+  padding: 1rem 4rem
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 1rem;
+
+}
+main {
+  padding: 4rem;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+.boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.box {
+  background: white;
+  border-radius: 5px;
+  color: #333;
+  padding:1rem
+}
+
+.box p:first-child{
+  font-weight: 700;
+}
+.box p:last-child{
+font-style: italic;
+}
+
+.post-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.post {
+  background: white;
+  border-radius: 5px;
+  color: #333;
+  padding: 1rem;
+  transition: transform 0.2s;
+}
+
+.post:hover {
+  transform: scale(1.02);
+}
+
+.post h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.5rem;
+}
+
+.post h4 {
+  font-size: 1em;
+  font-weight: 400;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.post p {
+  margin-bottom: 1rem;
+}
+
+.post strong {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.post button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.post button:hover {
+  background-color: orange;
+}
